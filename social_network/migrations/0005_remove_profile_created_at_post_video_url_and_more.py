@@ -7,7 +7,6 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('ai', '0002_videoprompt_category'),
         ('social_network', '0004_friendrequest'),
     ]
 

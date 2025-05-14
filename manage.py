@@ -5,6 +5,7 @@ import sys
 
 
 def main():
+    print('aaaa')
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pixeltales.settings')
     try:

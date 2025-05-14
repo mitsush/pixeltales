@@ -1,5 +1,3 @@
-# In cartoonix/ai/gpt.py
-
 import os
 import random
 from dotenv import load_dotenv
@@ -9,7 +7,9 @@ load_dotenv()
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 USE_MOCK_DATA = os.getenv("USE_MOCK_DATA", "False").lower() in ('true', '1', 't')
-client = OpenAI(api_key=OPENAI_API_KEY)
+
+if not USE_MOCK_DATA:
+    client = OpenAI(api_key=OPENAI_API_KEY)
 
 # Add mock data for demo mode
 MOCK_DESCRIPTIONS = [
@@ -92,7 +92,7 @@ def generate_images_from_descriptions(descriptions):
     """
     # Use mock data if enabled or if there's an API error
     if USE_MOCK_DATA:
-        print(f"Using mock image URLs")
+        print("Using mock image URLs")
         return MOCK_IMAGE_URLS
     
     image_urls = []

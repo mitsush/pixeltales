@@ -397,3 +397,86 @@ Style: Photorealistic with dramatic composition.
 2025-05-14 21:53:00,283 INFO api_logger VideoPrompt successfully created and saved to database.
 2025-05-14 21:53:02,340 INFO api_logger GET request to GenerateVideo endpoint.
 2025-05-14 22:00:23,616 INFO api_logger User mitsu1 accessed the home page and viewed 3 posts.
+2025-05-14 18:21:58,813 WARNING api_logger Failed registration attempt. Errors: <ul class="errorlist"><li>password2<ul class="errorlist" id="id_password2_error"><li>This password is too common.</li><li>This password is entirely numeric.</li></ul></li></ul>
+2025-05-14 18:22:08,546 INFO api_logger User ewer registered successfully.
+2025-05-14 18:22:19,450 WARNING api_logger Failed login attempt for username: qwer.
+2025-05-14 18:23:17,984 WARNING api_logger Failed login attempt for username: qwer.
+2025-05-14 18:23:32,789 INFO api_logger User gleb registered successfully.
+2025-05-14 18:23:37,580 INFO api_logger User gleb logged in successfully.
+2025-05-14 18:23:37,599 INFO api_logger User gleb accessed the home page and viewed 0 posts.
+2025-05-14 18:23:41,748 INFO api_logger GET request to GenerateVideo endpoint.
+2025-05-14 18:23:53,054 INFO api_logger POST request to GenerateVideo endpoint.
+2025-05-14 18:23:53,056 INFO api_logger MEDIA_ROOT is: /app/media
+2025-05-14 18:23:53,056 INFO api_logger MEDIA_URL is: /media/
+2025-05-14 18:23:53,056 INFO api_logger Generating video for prompt: wtf wtf wtf
+2025-05-14 18:23:53,954 INFO api_logger Image saved to /app/media/images/image_1747247033.jpg, exists: True
+2025-05-14 18:23:54,701 INFO api_logger Image saved to /app/media/images/image_1747247033.jpg, exists: True
+2025-05-14 18:23:55,452 INFO api_logger Image saved to /app/media/images/image_1747247034.jpg, exists: True
+2025-05-14 18:23:56,249 INFO api_logger Image saved to /app/media/images/image_1747247035.jpg, exists: True
+2025-05-14 18:23:57,028 INFO api_logger Image saved to /app/media/images/image_1747247036.jpg, exists: True
+2025-05-14 18:23:57,029 INFO api_logger Stored images locally: ['/media/images/image_1747247033.jpg', '/media/images/image_1747247033.jpg', '/media/images/image_1747247034.jpg', '/media/images/image_1747247035.jpg', '/media/images/image_1747247036.jpg']
+2025-05-14 18:23:58,593 INFO api_logger Generated video URLs: ['/media/videos/placeholder_1747247037.mp4', '/media/videos/placeholder_1747247038.mp4', '/media/videos/placeholder_1747247040.mp4', '/media/videos/placeholder_1747247041.mp4', '/media/videos/placeholder_1747247042.mp4']
+2025-05-14 18:23:58,594 INFO api_logger Video already at /app/media/videos/placeholder_1747247037.mp4, exists: True
+2025-05-14 18:23:58,594 INFO api_logger Video already at /app/media/videos/placeholder_1747247038.mp4, exists: True
+2025-05-14 18:23:58,595 INFO api_logger Video already at /app/media/videos/placeholder_1747247040.mp4, exists: True
+2025-05-14 18:23:58,595 INFO api_logger Video already at /app/media/videos/placeholder_1747247041.mp4, exists: True
+2025-05-14 18:23:58,596 INFO api_logger Video already at /app/media/videos/placeholder_1747247042.mp4, exists: True
+2025-05-14 18:23:58,601 INFO api_logger VideoPrompt successfully created and saved to database.
+2025-05-14 18:24:03,230 INFO api_logger GET request to GenerateVideo endpoint.
+2025-05-14 18:24:21,702 INFO api_logger User gleb is viewing their friends list with 0 friends.
+2025-05-14 18:24:21,704 INFO api_logger User gleb has sent friend requests to 0 users.
+2025-05-14 18:24:21,705 INFO api_logger User gleb has received 0 friend requests.
+2025-05-14 18:24:21,705 INFO api_logger User gleb performed an empty search.
+2025-05-14 18:24:21,707 INFO api_logger Found 0 users who are not friends.
+2025-05-14 18:24:23,457 INFO api_logger User gleb viewed the profile of gleb. Sent request: False, Is friend: False
+2025-05-14 18:24:26,606 INFO api_logger User gleb accessed the home page and viewed 0 posts.
+2025-05-14 18:24:29,525 INFO api_logger GET request to GenerateVideo endpoint.
+2025-05-14 18:25:27,247 INFO api_logger User gleb accessed the home page and viewed 0 posts.
+2025-05-14 18:25:49,072 INFO api_logger User gleb created a post with title: Greetings!.
+2025-05-14 18:25:49,089 INFO api_logger User gleb accessed the home page and viewed 1 posts.
+2025-05-14 18:26:03,100 INFO api_logger User gleb accessed the home page and viewed 1 posts.
+2025-05-14 18:27:27,482 INFO api_logger User gleb is viewing their friends list with 0 friends.
+2025-05-14 18:27:27,484 INFO api_logger User gleb has sent friend requests to 0 users.
+2025-05-14 18:27:27,485 INFO api_logger User gleb has received 0 friend requests.
+2025-05-14 18:27:27,485 INFO api_logger User gleb performed an empty search.
+2025-05-14 18:27:27,486 INFO api_logger Found 0 users who are not friends.
+2025-05-14 18:27:34,315 INFO api_logger User gleb viewed the profile of gleb. Sent request: False, Is friend: False
+2025-05-14 18:27:38,761 INFO api_logger GET request to GenerateVideo endpoint.
+2025-05-14 18:27:39,984 INFO api_logger User gleb logged out.
+2025-05-14 18:27:52,562 INFO api_logger User gleb logged in successfully.
+2025-05-14 18:27:52,590 INFO api_logger User gleb accessed the home page and viewed 1 posts.
+2025-05-14 18:28:20,642 INFO api_logger User gleb accessed the home page and viewed 1 posts.
+2025-05-14 18:28:36,503 INFO api_logger User gleb accessed the home page and viewed 1 posts.
+2025-05-14 18:28:38,046 INFO api_logger User gleb viewed the profile of gleb. Sent request: False, Is friend: False
+2025-05-14 18:28:47,098 INFO api_logger User gleb is viewing their friends list with 0 friends.
+2025-05-14 18:28:47,099 INFO api_logger User gleb has sent friend requests to 0 users.
+2025-05-14 18:28:47,100 INFO api_logger User gleb has received 0 friend requests.
+2025-05-14 18:28:47,100 INFO api_logger User gleb performed an empty search.
+2025-05-14 18:28:47,103 INFO api_logger Found 0 users who are not friends.
+2025-05-14 18:28:49,125 INFO api_logger GET request to GenerateVideo endpoint.
+2025-05-14 18:40:13,205 INFO api_logger POST request to GenerateVideo endpoint.
+2025-05-14 18:40:13,206 INFO api_logger MEDIA_ROOT is: /app/media
+2025-05-14 18:40:13,206 INFO api_logger MEDIA_URL is: /media/
+2025-05-14 18:40:13,206 INFO api_logger Generating video for prompt: Fantasy world
+2025-05-14 18:40:14,676 INFO api_logger Image saved to /app/media/images/image_1747248013.jpg, exists: True
+2025-05-14 18:40:15,405 INFO api_logger Image saved to /app/media/images/image_1747248014.jpg, exists: True
+2025-05-14 18:40:16,121 INFO api_logger Image saved to /app/media/images/image_1747248015.jpg, exists: True
+2025-05-14 18:40:17,129 INFO api_logger Image saved to /app/media/images/image_1747248016.jpg, exists: True
+2025-05-14 18:40:17,961 INFO api_logger Image saved to /app/media/images/image_1747248017.jpg, exists: True
+2025-05-14 18:40:17,961 INFO api_logger Stored images locally: ['/media/images/image_1747248013.jpg', '/media/images/image_1747248014.jpg', '/media/images/image_1747248015.jpg', '/media/images/image_1747248016.jpg', '/media/images/image_1747248017.jpg']
+2025-05-14 18:40:22,100 INFO api_logger Generated video URLs: ['/media/videos/placeholder_1747248017.mp4', '/media/videos/placeholder_1747248019.mp4', '/media/videos/placeholder_1747248021.mp4', '/media/videos/placeholder_1747248023.mp4', '/media/videos/placeholder_1747248025.mp4']
+2025-05-14 18:40:22,102 INFO api_logger Video already at /app/media/videos/placeholder_1747248017.mp4, exists: True
+2025-05-14 18:40:22,103 INFO api_logger Video already at /app/media/videos/placeholder_1747248019.mp4, exists: True
+2025-05-14 18:40:22,104 INFO api_logger Video already at /app/media/videos/placeholder_1747248021.mp4, exists: True
+2025-05-14 18:40:22,104 INFO api_logger Video already at /app/media/videos/placeholder_1747248023.mp4, exists: True
+2025-05-14 18:40:22,105 INFO api_logger Video already at /app/media/videos/placeholder_1747248025.mp4, exists: True
+2025-05-14 18:40:22,114 INFO api_logger VideoPrompt successfully created and saved to database.
+2025-05-14 18:40:24,595 INFO api_logger GET request to GenerateVideo endpoint.
+2025-05-14 18:41:43,033 INFO api_logger User gleb viewed the profile of gleb. Sent request: False, Is friend: False
+2025-05-14 18:41:44,085 INFO api_logger User gleb is viewing their friends list with 0 friends.
+2025-05-14 18:41:44,087 INFO api_logger User gleb has sent friend requests to 0 users.
+2025-05-14 18:41:44,088 INFO api_logger User gleb has received 0 friend requests.
+2025-05-14 18:41:44,088 INFO api_logger User gleb performed an empty search.
+2025-05-14 18:41:44,089 INFO api_logger Found 0 users who are not friends.
+2025-05-14 18:41:44,739 INFO api_logger GET request to GenerateVideo endpoint.
+2025-05-14 18:41:46,194 INFO api_logger User gleb accessed the home page and viewed 1 posts.
