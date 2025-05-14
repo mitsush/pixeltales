@@ -43,6 +43,10 @@
                 <a class="nav-link" href="{% url 'list_friends' %}">
                     <i class="bi bi-people"></i> Friends
                 </a>
+                <a class="nav-link" href="{% url 'chat_rooms' %}">
+                    <i class="bi bi-chat-dots"></i> Messages
+                    <span id="unread-badge" class="badge bg-danger rounded-pill d-none">0</span>
+                </a>
                 <a class="nav-link" href="{% url 'generate_video' %}">
                     <i class="bi bi-camera-video"></i> Create Story
                 </a>
@@ -79,9 +83,14 @@
                     <a href="{% url 'profile_view' friend.user.username %}" class="text-decoration-none">
                         <i class="bi bi-person-circle"></i> {{ friend.user.username }}
                     </a>
-                    <button onclick="removeFriend({{ friend.pk }})" class="btn btn-danger btn-sm">
-                        <i class="bi bi-person-x"></i> Remove Friend
-                    </button>
+                    <div>
+                        <a href="{% url 'create_private_chat' friend.user.id %}" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-chat-dots"></i> Chat
+                        </a>
+                        <button onclick="removeFriend({{ friend.pk }})" class="btn btn-danger btn-sm">
+                            <i class="bi bi-person-x"></i> Remove
+                        </button>
+                    </div>
                 </li>
             {% empty %}
                 <li class="list-group-item text-center">You have no friends yet.</li>
@@ -238,6 +247,25 @@
                 alert('An error occurred. Please try again.');
             });
         }
+        
+        // Function to update unread message count
+        function updateUnreadCount() {
+            fetch('/chat/unread/count/')
+                .then(response => response.json())
+                .then(data => {
+                    const unreadBadge = document.getElementById('unread-badge');
+                    if (data.unread_count > 0) {
+                        unreadBadge.textContent = data.unread_count;
+                        unreadBadge.classList.remove('d-none');
+                    } else {
+                        unreadBadge.classList.add('d-none');
+                    }
+                });
+        }
+
+        // Update count on page load and every minute
+        updateUnreadCount();
+        setInterval(updateUnreadCount, 60000);
     </script>
 </body>
 </html>

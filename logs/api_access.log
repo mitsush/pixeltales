@@ -480,3 +480,205 @@ Style: Photorealistic with dramatic composition.
 2025-05-14 18:41:44,089 INFO api_logger Found 0 users who are not friends.
 2025-05-14 18:41:44,739 INFO api_logger GET request to GenerateVideo endpoint.
 2025-05-14 18:41:46,194 INFO api_logger User gleb accessed the home page and viewed 1 posts.
+2025-05-15 01:35:05,884 WARNING api_logger Failed login attempt for username: mitsu1.
+2025-05-15 01:35:10,910 INFO api_logger User 123 logged in successfully.
+2025-05-15 01:35:10,936 INFO api_logger User 123 accessed the home page and viewed 3 posts.
+2025-05-15 01:35:26,075 INFO api_logger User 123 viewed the profile of 123. Sent request: False, Is friend: False
+2025-05-15 01:35:33,968 INFO api_logger User 123 updated their profile.
+2025-05-15 01:35:33,980 INFO api_logger User 123 accessed the home page and viewed 3 posts.
+2025-05-15 01:35:35,868 INFO api_logger User 123 viewed the profile of 123. Sent request: False, Is friend: False
+2025-05-15 01:35:39,813 INFO api_logger User 123 is viewing their friends list with 0 friends.
+2025-05-15 01:35:39,814 INFO api_logger User 123 has sent friend requests to 0 users.
+2025-05-15 01:35:39,814 INFO api_logger User 123 has received 0 friend requests.
+2025-05-15 01:35:39,815 INFO api_logger User 123 performed an empty search.
+2025-05-15 01:35:39,815 INFO api_logger Found 0 users who are not friends.
+2025-05-15 01:35:43,397 INFO api_logger User 123 is viewing their friends list with 0 friends.
+2025-05-15 01:35:43,399 INFO api_logger User 123 has sent friend requests to 0 users.
+2025-05-15 01:35:43,400 INFO api_logger User 123 has received 0 friend requests.
+2025-05-15 01:35:43,401 INFO api_logger User 123 performed a search with query 'mitsu', found 4 users.
+2025-05-15 01:35:43,403 INFO api_logger Found 4 users who are not friends.
+2025-05-15 01:35:44,947 INFO api_logger Friend request sent from 123 to mitsu.
+2025-05-15 01:35:45,986 INFO api_logger User 123 is viewing their friends list with 0 friends.
+2025-05-15 01:35:45,993 INFO api_logger User 123 has sent friend requests to 1 users.
+2025-05-15 01:35:46,000 INFO api_logger User 123 has received 0 friend requests.
+2025-05-15 01:35:46,007 INFO api_logger User 123 performed a search with query 'mitsu', found 4 users.
+2025-05-15 01:35:46,032 INFO api_logger Found 4 users who are not friends.
+2025-05-15 01:35:46,133 INFO api_logger Friend request sent from 123 to mitsush.
+2025-05-15 01:35:46,867 WARNING api_logger User 123 already sent a friend request to user mitsush.
+2025-05-15 01:35:47,184 WARNING api_logger User 123 already sent a friend request to user mitsush.
+2025-05-15 01:35:47,810 INFO api_logger User 123 is viewing their friends list with 0 friends.
+2025-05-15 01:35:47,815 INFO api_logger User 123 has sent friend requests to 2 users.
+2025-05-15 01:35:47,820 INFO api_logger User 123 has received 0 friend requests.
+2025-05-15 01:35:47,826 INFO api_logger User 123 performed a search with query 'mitsu', found 4 users.
+2025-05-15 01:35:47,834 INFO api_logger Found 4 users who are not friends.
+2025-05-15 01:35:48,565 INFO api_logger User 123 is viewing their friends list with 0 friends.
+2025-05-15 01:35:48,567 INFO api_logger User 123 has sent friend requests to 2 users.
+2025-05-15 01:35:48,569 INFO api_logger User 123 has received 0 friend requests.
+2025-05-15 01:35:48,571 INFO api_logger User 123 performed a search with query 'mitsu', found 4 users.
+2025-05-15 01:35:48,574 INFO api_logger Found 4 users who are not friends.
+2025-05-15 01:35:49,710 WARNING api_logger User 123 already sent a friend request to user mitsu1.
+2025-05-15 01:35:49,743 INFO api_logger Friend request sent from 123 to mitsu1.
+2025-05-15 01:35:50,656 INFO api_logger User 123 is viewing their friends list with 0 friends.
+2025-05-15 01:35:50,659 INFO api_logger User 123 has sent friend requests to 3 users.
+2025-05-15 01:35:50,661 INFO api_logger User 123 has received 0 friend requests.
+2025-05-15 01:35:50,666 INFO api_logger User 123 performed a search with query 'mitsu', found 4 users.
+2025-05-15 01:35:50,673 INFO api_logger Found 4 users who are not friends.
+2025-05-15 01:35:50,792 INFO api_logger Friend request sent from 123 to mitsumitsu.
+2025-05-15 01:35:51,286 INFO api_logger User 123 is viewing their friends list with 0 friends.
+2025-05-15 01:35:51,288 INFO api_logger User 123 has sent friend requests to 4 users.
+2025-05-15 01:35:51,293 INFO api_logger User 123 has received 0 friend requests.
+2025-05-15 01:35:51,295 INFO api_logger User 123 performed a search with query 'mitsu', found 4 users.
+2025-05-15 01:35:51,301 INFO api_logger Found 4 users who are not friends.
+2025-05-15 01:35:52,022 INFO api_logger User 123 is viewing their friends list with 0 friends.
+2025-05-15 01:35:52,026 INFO api_logger User 123 has sent friend requests to 4 users.
+2025-05-15 01:35:52,033 INFO api_logger User 123 has received 0 friend requests.
+2025-05-15 01:35:52,041 INFO api_logger User 123 performed a search with query 'mitsu', found 4 users.
+2025-05-15 01:35:52,042 WARNING api_logger User 123 already sent a friend request to user mitsumitsu.
+2025-05-15 01:35:52,048 INFO api_logger Found 4 users who are not friends.
+2025-05-15 01:35:52,804 INFO api_logger User 123 is viewing their friends list with 0 friends.
+2025-05-15 01:35:52,811 INFO api_logger User 123 has sent friend requests to 4 users.
+2025-05-15 01:35:52,820 INFO api_logger User 123 has received 0 friend requests.
+2025-05-15 01:35:52,824 INFO api_logger User 123 performed a search with query 'mitsu', found 4 users.
+2025-05-15 01:35:52,831 INFO api_logger Found 4 users who are not friends.
+2025-05-15 01:35:52,892 WARNING api_logger User 123 already sent a friend request to user mitsumitsu.
+2025-05-15 01:35:55,109 INFO api_logger GET request to GenerateVideo endpoint.
+2025-05-15 01:36:03,519 INFO api_logger POST request to GenerateVideo endpoint.
+2025-05-15 01:36:03,521 INFO api_logger MEDIA_ROOT is: C:\Users\SystemX\Desktop\django\pixeltales-main\media
+2025-05-15 01:36:03,521 INFO api_logger MEDIA_URL is: /media/
+2025-05-15 01:36:03,521 INFO api_logger Generating video for prompt: a phantasy world
+2025-05-15 01:36:04,302 INFO api_logger Image saved to C:\Users\SystemX\Desktop\django\pixeltales-main\media\images/image_1747254963.jpg, exists: True
+2025-05-15 01:36:05,066 INFO api_logger Image saved to C:\Users\SystemX\Desktop\django\pixeltales-main\media\images/image_1747254964.jpg, exists: True
+2025-05-15 01:36:05,917 INFO api_logger Image saved to C:\Users\SystemX\Desktop\django\pixeltales-main\media\images/image_1747254965.jpg, exists: True
+2025-05-15 01:36:06,464 INFO api_logger Image saved to C:\Users\SystemX\Desktop\django\pixeltales-main\media\images/image_1747254965.jpg, exists: True
+2025-05-15 01:36:07,205 INFO api_logger Image saved to C:\Users\SystemX\Desktop\django\pixeltales-main\media\images/image_1747254966.jpg, exists: True
+2025-05-15 01:36:07,205 INFO api_logger Stored images locally: ['/media/images/image_1747254963.jpg', '/media/images/image_1747254964.jpg', '/media/images/image_1747254965.jpg', '/media/images/image_1747254965.jpg', '/media/images/image_1747254966.jpg']
+2025-05-15 01:36:08,879 INFO api_logger Generated video URLs: ['/media/videos/placeholder_1747254967.mp4', '/media/videos/placeholder_1747254968.mp4', '/media/videos/placeholder_1747254970.mp4', '/media/videos/placeholder_1747254971.mp4', '/media/videos/placeholder_1747254972.mp4']
+2025-05-15 01:36:08,879 INFO api_logger Video already at C:\Users\SystemX\Desktop\django\pixeltales-main\media\videos/placeholder_1747254967.mp4, exists: True
+2025-05-15 01:36:08,880 INFO api_logger Video already at C:\Users\SystemX\Desktop\django\pixeltales-main\media\videos/placeholder_1747254968.mp4, exists: True
+2025-05-15 01:36:08,880 INFO api_logger Video already at C:\Users\SystemX\Desktop\django\pixeltales-main\media\videos/placeholder_1747254970.mp4, exists: True
+2025-05-15 01:36:08,880 INFO api_logger Video already at C:\Users\SystemX\Desktop\django\pixeltales-main\media\videos/placeholder_1747254971.mp4, exists: True
+2025-05-15 01:36:08,881 INFO api_logger Video already at C:\Users\SystemX\Desktop\django\pixeltales-main\media\videos/placeholder_1747254972.mp4, exists: True
+2025-05-15 01:36:08,885 INFO api_logger VideoPrompt successfully created and saved to database.
+2025-05-15 01:36:11,453 INFO api_logger GET request to GenerateVideo endpoint.
+2025-05-15 01:36:23,135 INFO api_logger User 123 accessed the home page and viewed 3 posts.
+2025-05-15 01:39:48,845 INFO api_logger User 123 is viewing their friends list with 0 friends.
+2025-05-15 01:39:48,845 INFO api_logger User 123 has sent friend requests to 4 users.
+2025-05-15 01:39:48,846 INFO api_logger User 123 has received 0 friend requests.
+2025-05-15 01:39:48,846 INFO api_logger User 123 performed an empty search.
+2025-05-15 01:39:48,847 INFO api_logger Found 0 users who are not friends.
+2025-05-15 01:40:01,704 WARNING api_logger Failed login attempt for username: mitsu1.
+2025-05-15 01:40:08,990 WARNING api_logger Failed registration attempt. Errors: <ul class="errorlist"><li>username<ul class="errorlist"><li>A user with that username already exists.</li></ul></li></ul>
+2025-05-15 01:40:13,101 INFO api_logger User mitsu12 registered successfully.
+2025-05-15 01:40:17,468 INFO api_logger User mitsu12 logged in successfully.
+2025-05-15 01:40:17,488 INFO api_logger User mitsu12 accessed the home page and viewed 3 posts.
+2025-05-15 01:40:19,901 INFO api_logger User mitsu12 is viewing their friends list with 0 friends.
+2025-05-15 01:40:19,905 INFO api_logger User mitsu12 has sent friend requests to 0 users.
+2025-05-15 01:40:19,907 INFO api_logger User mitsu12 has received 0 friend requests.
+2025-05-15 01:40:19,907 INFO api_logger User mitsu12 performed an empty search.
+2025-05-15 01:40:19,909 INFO api_logger Found 0 users who are not friends.
+2025-05-15 01:40:24,123 INFO api_logger User 123 viewed the profile of 123. Sent request: False, Is friend: False
+2025-05-15 01:40:26,220 INFO api_logger User mitsu12 is viewing their friends list with 0 friends.
+2025-05-15 01:40:26,221 INFO api_logger User mitsu12 has sent friend requests to 0 users.
+2025-05-15 01:40:26,224 INFO api_logger User mitsu12 has received 0 friend requests.
+2025-05-15 01:40:26,227 INFO api_logger User mitsu12 performed a search with query '123', found 1 users.
+2025-05-15 01:40:26,231 INFO api_logger Found 1 users who are not friends.
+2025-05-15 01:40:27,371 INFO api_logger Friend request sent from mitsu12 to 123.
+2025-05-15 01:40:28,188 INFO api_logger User mitsu12 is viewing their friends list with 0 friends.
+2025-05-15 01:40:28,191 INFO api_logger User mitsu12 has sent friend requests to 1 users.
+2025-05-15 01:40:28,193 INFO api_logger User mitsu12 has received 0 friend requests.
+2025-05-15 01:40:28,195 INFO api_logger User mitsu12 performed a search with query '123', found 1 users.
+2025-05-15 01:40:28,196 INFO api_logger Found 1 users who are not friends.
+2025-05-15 01:40:29,317 INFO api_logger User 123 viewed the profile of 123. Sent request: False, Is friend: False
+2025-05-15 01:40:31,788 INFO api_logger User 123 is accepting a friend request with ID 8
+2025-05-15 01:40:31,827 INFO api_logger User 123 and mitsu12 are now friends.
+2025-05-15 01:40:33,416 INFO api_logger User 123 viewed the profile of 123. Sent request: False, Is friend: False
+2025-05-15 01:40:34,919 INFO api_logger User 123 is viewing their friends list with 1 friends.
+2025-05-15 01:40:34,923 INFO api_logger User 123 has sent friend requests to 4 users.
+2025-05-15 01:40:34,929 INFO api_logger User 123 has received 0 friend requests.
+2025-05-15 01:40:34,929 INFO api_logger User 123 performed an empty search.
+2025-05-15 01:40:34,931 INFO api_logger Found 0 users who are not friends.
+2025-05-15 01:40:36,318 INFO chat_logger New private chat created between 123 and mitsu12
+2025-05-15 01:40:43,952 INFO api_logger User mitsu12 is viewing their friends list with 1 friends.
+2025-05-15 01:40:43,955 INFO api_logger User mitsu12 has sent friend requests to 0 users.
+2025-05-15 01:40:43,956 INFO api_logger User mitsu12 has received 0 friend requests.
+2025-05-15 01:40:43,956 INFO api_logger User mitsu12 performed an empty search.
+2025-05-15 01:40:43,956 INFO api_logger Found 0 users who are not friends.
+2025-05-15 01:40:54,628 INFO api_logger User mitsu12 is viewing their friends list with 1 friends.
+2025-05-15 01:40:54,629 INFO api_logger User mitsu12 has sent friend requests to 0 users.
+2025-05-15 01:40:54,630 INFO api_logger User mitsu12 has received 0 friend requests.
+2025-05-15 01:40:54,630 INFO api_logger User mitsu12 performed an empty search.
+2025-05-15 01:40:54,631 INFO api_logger Found 0 users who are not friends.
+2025-05-15 01:40:58,771 INFO chat_logger New group chat 'asdasd' created by mitsu12
+2025-05-14 20:49:58,708 INFO api_logger User 123 accessed the home page and viewed 3 posts.
+2025-05-15 01:50:03,616 INFO chat_logger WebSocket connection attempt: user=123, room_id=2
+2025-05-15 01:50:03,623 INFO chat_logger WebSocket connection accepted: user=123, room_id=2
+2025-05-15 01:50:04,720 INFO chat_logger Message received: user=123, room_id=2, message=asd...
+2025-05-15 01:50:04,743 INFO chat_logger Message sent to client: user=123, room_id=2
+2025-05-15 01:50:05,353 INFO chat_logger Message received: user=123, room_id=2, message=asd...
+2025-05-15 01:50:05,364 INFO chat_logger Message sent to client: user=123, room_id=2
+2025-05-15 01:50:05,549 INFO chat_logger Message received: user=123, room_id=2, message=a...
+2025-05-15 01:50:05,563 INFO chat_logger Message sent to client: user=123, room_id=2
+2025-05-15 01:50:05,736 INFO chat_logger Message received: user=123, room_id=2, message=sd...
+2025-05-15 01:50:05,756 INFO chat_logger Message sent to client: user=123, room_id=2
+2025-05-15 01:50:05,924 INFO chat_logger Message received: user=123, room_id=2, message=asd...
+2025-05-15 01:50:05,941 INFO chat_logger Message sent to client: user=123, room_id=2
+2025-05-15 01:50:08,290 INFO chat_logger WebSocket connection attempt: user=mitsu12, room_id=2
+2025-05-15 01:50:08,300 INFO chat_logger WebSocket connection accepted: user=mitsu12, room_id=2
+2025-05-15 01:50:12,710 INFO chat_logger Message received: user=mitsu12, room_id=2, message=asdasdasd...
+2025-05-15 01:50:12,727 INFO chat_logger Message sent to client: user=123, room_id=2
+2025-05-15 01:50:12,729 INFO chat_logger Message sent to client: user=mitsu12, room_id=2
+2025-05-15 01:50:12,861 INFO chat_logger Message received: user=mitsu12, room_id=2, message=as...
+2025-05-15 01:50:12,871 INFO chat_logger Message sent to client: user=123, room_id=2
+2025-05-15 01:50:12,873 INFO chat_logger Message sent to client: user=mitsu12, room_id=2
+2025-05-15 01:50:13,040 INFO chat_logger Message received: user=mitsu12, room_id=2, message=da...
+2025-05-15 01:50:13,054 INFO chat_logger Message sent to client: user=123, room_id=2
+2025-05-15 01:50:13,054 INFO chat_logger Message sent to client: user=mitsu12, room_id=2
+2025-05-15 01:50:13,187 INFO chat_logger Message received: user=mitsu12, room_id=2, message=sd...
+2025-05-15 01:50:13,199 INFO chat_logger Message sent to client: user=123, room_id=2
+2025-05-15 01:50:13,200 INFO chat_logger Message sent to client: user=mitsu12, room_id=2
+2025-05-15 01:50:13,359 INFO chat_logger Message received: user=mitsu12, room_id=2, message=as...
+2025-05-15 01:50:13,370 INFO chat_logger Message sent to client: user=123, room_id=2
+2025-05-15 01:50:13,371 INFO chat_logger Message sent to client: user=mitsu12, room_id=2
+2025-05-15 01:50:14,469 INFO chat_logger Message received: user=mitsu12, room_id=2, message=sosal?...
+2025-05-15 01:50:14,490 INFO chat_logger Message sent to client: user=123, room_id=2
+2025-05-15 01:50:14,492 INFO chat_logger Message sent to client: user=mitsu12, room_id=2
+2025-05-15 01:50:16,859 INFO chat_logger Message received: user=123, room_id=2, message=sosal?...
+2025-05-15 01:50:16,871 INFO chat_logger Message sent to client: user=123, room_id=2
+2025-05-15 01:50:16,872 INFO chat_logger Message sent to client: user=mitsu12, room_id=2
+2025-05-15 01:50:22,603 INFO chat_logger WebSocket disconnected: user=123, room_id=2, code=1001
+2025-05-14 20:50:27,030 INFO chat_logger New group chat 'asdasd' created by 123 with 1 participants
+2025-05-15 01:50:27,254 INFO chat_logger WebSocket connection attempt: user=123, room_id=3
+2025-05-15 01:50:27,267 INFO chat_logger WebSocket connection accepted: user=123, room_id=3
+2025-05-15 01:50:29,619 INFO chat_logger Message received: user=123, room_id=3, message=asdasdasdasd...
+2025-05-15 01:50:29,627 INFO chat_logger Message sent to client: user=123, room_id=3
+2025-05-15 01:51:08,231 INFO chat_logger WebSocket disconnected: user=mitsu12, room_id=2, code=1001
+2025-05-15 01:51:09,625 INFO chat_logger WebSocket connection attempt: user=mitsu12, room_id=3
+2025-05-15 01:51:09,635 INFO chat_logger WebSocket connection accepted: user=mitsu12, room_id=3
+2025-05-15 01:51:11,994 INFO chat_logger WebSocket disconnected: user=123, room_id=3, code=1001
+2025-05-15 01:51:13,008 INFO chat_logger WebSocket connection attempt: user=123, room_id=2
+2025-05-15 01:51:13,019 INFO chat_logger WebSocket connection accepted: user=123, room_id=2
+2025-05-15 01:51:14,741 INFO chat_logger WebSocket disconnected: user=123, room_id=2, code=1001
+2025-05-15 01:51:16,375 INFO chat_logger WebSocket connection attempt: user=123, room_id=1
+2025-05-15 01:51:16,389 INFO chat_logger WebSocket connection accepted: user=123, room_id=1
+2025-05-15 01:51:18,355 INFO chat_logger Message received: user=123, room_id=1, message=asdasdasd...
+2025-05-15 01:51:18,368 INFO chat_logger Message sent to client: user=123, room_id=1
+2025-05-15 01:51:19,797 INFO chat_logger WebSocket disconnected: user=mitsu12, room_id=3, code=1001
+2025-05-15 01:51:20,675 INFO chat_logger WebSocket connection attempt: user=mitsu12, room_id=2
+2025-05-15 01:51:20,688 INFO chat_logger WebSocket connection accepted: user=mitsu12, room_id=2
+2025-05-15 01:51:21,316 INFO chat_logger WebSocket disconnected: user=mitsu12, room_id=2, code=1001
+2025-05-15 01:51:22,274 INFO chat_logger WebSocket connection attempt: user=mitsu12, room_id=1
+2025-05-15 01:51:22,286 INFO chat_logger WebSocket connection accepted: user=mitsu12, room_id=1
+2025-05-15 01:51:22,920 INFO chat_logger WebSocket disconnected: user=mitsu12, room_id=1, code=1001
+2025-05-15 01:51:24,184 INFO chat_logger WebSocket connection attempt: user=mitsu12, room_id=3
+2025-05-15 01:51:24,193 INFO chat_logger WebSocket connection accepted: user=mitsu12, room_id=3
+2025-05-15 01:51:24,864 INFO chat_logger WebSocket disconnected: user=mitsu12, room_id=3, code=1001
+2025-05-15 01:51:25,339 INFO api_logger User mitsu12 viewed the profile of mitsu12. Sent request: False, Is friend: False
+2025-05-15 01:51:38,270 INFO api_logger GET request to GenerateVideo endpoint.
+2025-05-15 01:51:39,536 INFO api_logger User mitsu12 is viewing their friends list with 1 friends.
+2025-05-15 01:51:39,537 INFO api_logger User mitsu12 has sent friend requests to 0 users.
+2025-05-15 01:51:39,538 INFO api_logger User mitsu12 has received 0 friend requests.
+2025-05-15 01:51:39,538 INFO api_logger User mitsu12 performed an empty search.
+2025-05-15 01:51:39,540 INFO api_logger Found 0 users who are not friends.
+2025-05-15 01:51:40,891 INFO api_logger User mitsu12 viewed the profile of mitsu12. Sent request: False, Is friend: False
+2025-05-15 01:51:42,276 INFO api_logger User mitsu12 accessed the home page and viewed 3 posts.
+2025-05-15 01:51:52,291 INFO chat_logger WebSocket disconnected: user=123, room_id=1, code=1001
