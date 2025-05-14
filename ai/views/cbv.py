@@ -17,6 +17,7 @@ import os
 import time
 from django.conf import settings
 from ai.s3_utils import upload_image_to_s3, upload_video_to_s3, ensure_dir_exists, create_placeholder_video
+import requests
 
 logger = logging.getLogger('api_logger')
 
@@ -41,6 +42,9 @@ class GenerateVideo(APIView):
 
     def post(self, request):
         logger.info("POST request to GenerateVideo endpoint.")
+        logger.info(f"MEDIA_ROOT is: {settings.MEDIA_ROOT}")
+        logger.info(f"MEDIA_URL is: {settings.MEDIA_URL}")
+        
         try:
             user_prompt = request.data.get("prompt")
             if not user_prompt:
@@ -64,49 +68,80 @@ class GenerateVideo(APIView):
 
             # Store images locally
             s3_urls = []
-            for i in range(5):  # Ensure we have 5 images
-                timestamp = int(time.time()) + i
-                # Use a different image for each position
+            for url in image_urls:
+                local_url = upload_image_to_s3(url)
+                if local_url:
+                    s3_urls.append(local_url)
+                    # Verify file exists
+                    file_path = os.path.join(settings.MEDIA_ROOT, local_url.replace('/media/', ''))
+                    logger.info(f"Image saved to {file_path}, exists: {os.path.exists(file_path)}")
+            
+            # Ensure we have 5 images
+            while len(s3_urls) < 5:
+                timestamp = int(time.time()) + len(s3_urls)
                 placeholder_url = f"https://picsum.photos/seed/{timestamp}/400/300"
                 local_url = upload_image_to_s3(placeholder_url)
                 if local_url:
                     s3_urls.append(local_url)
+                    file_path = os.path.join(settings.MEDIA_ROOT, local_url.replace('/media/', ''))
+                    logger.info(f"Placeholder image saved to {file_path}, exists: {os.path.exists(file_path)}")
                 else:
-                    s3_urls.append(f"https://via.placeholder.com/400x300/87CEEB/000000?text=Image+{i+1}")
-
+                    s3_urls.append(f"https://picsum.photos/seed/{timestamp}/400/300")
             
-            if not s3_urls:
-                logger.error("Failed to upload images to S3.")
-                return Response({'error': 'Failed to upload images to S3'}, status=500)
+            if len(s3_urls) > 5:
+                s3_urls = s3_urls[:5]
                 
             logger.info(f"Stored images locally: {s3_urls}")
 
-            if len(s3_urls) < 5:
-                for i in range(len(s3_urls), 5):
-                    s3_urls.append(f"https://via.placeholder.com/400x300/87CEEB/000000?text=Image+{i+1}")
-            elif len(s3_urls) > 5:
-                s3_urls = s3_urls[:5]
-
-            # For mock mode, create placeholder videos
+            # Generate videos from the images
+            video_urls = generate_video_from_images_with_nvidia(s3_urls)
+            logger.info(f"Generated video URLs: {video_urls}")
+            
+            # Make sure we have valid video URLs
             s3_video_urls = []
-            for i in range(len(s3_urls)):
-                # Create a placeholder video and get its URL
-                timestamp = int(time.time()) + i
-                folder_path = os.path.join(settings.MEDIA_ROOT, "videos")
-                ensure_dir_exists(folder_path)
-                file_path = os.path.join(folder_path, f"placeholder_{timestamp}.mp4")
-                
-                if create_placeholder_video(file_path):
-                    s3_video_urls.append(f"/media/videos/placeholder_{timestamp}.mp4")
+            for url in video_urls:
+                if url.startswith('data:'):
+                    # It's base64 data - upload it
+                    local_url = upload_video_to_s3(url)
+                    if local_url:
+                        s3_video_urls.append(local_url)
+                        file_path = os.path.join(settings.MEDIA_ROOT, local_url.replace('/media/', ''))
+                        logger.info(f"Video saved to {file_path}, exists: {os.path.exists(file_path)}")
+                elif url.startswith('/media/'):
+                    # It's already a local media URL
+                    s3_video_urls.append(url)
+                    file_path = os.path.join(settings.MEDIA_ROOT, url.replace('/media/', ''))
+                    logger.info(f"Video already at {file_path}, exists: {os.path.exists(file_path)}")
+                elif url.startswith('http'):
+                    # It's a remote URL - download it
+                    local_url = upload_video_to_s3(requests.get(url).content)
+                    if local_url:
+                        s3_video_urls.append(local_url)
+                        file_path = os.path.join(settings.MEDIA_ROOT, local_url.replace('/media/', ''))
+                        logger.info(f"Remote video saved to {file_path}, exists: {os.path.exists(file_path)}")
+                    else:
+                        s3_video_urls.append(url)  # Keep the remote URL
 
+            # Ensure we have videos
             if not s3_video_urls:
-                logger.error("Failed to create placeholder videos.")
-                return Response({'error': 'Failed to create videos'}, status=500)
+                for i in range(5):
+                    timestamp = int(time.time()) + i
+                    folder_path = os.path.join(settings.MEDIA_ROOT, 'videos')
+                    ensure_dir_exists(folder_path)
+                    file_path = os.path.join(folder_path, f"placeholder_{timestamp}.mp4")
+                    
+                    if create_placeholder_video(file_path):
+                        url = f"/media/videos/placeholder_{timestamp}.mp4"
+                        s3_video_urls.append(url)
+                        logger.info(f"Created fallback video at {file_path}, URL: {url}")
 
-            logger.info(f"Created placeholder videos: {s3_video_urls}")
-
+            # Make sure we have at least one video
+            if not s3_video_urls:
+                s3_video_urls.append("https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4")
+                logger.info("Using external fallback video URL as last resort")
+            
             # Use the first video URL as the final video
-            final_video_url = s3_video_urls[0] if s3_video_urls else ""
+            final_video_url = s3_video_urls[0] if s3_video_urls else "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4"
 
             # Save everything to the database
             video_prompt = VideoPrompt.objects.create(

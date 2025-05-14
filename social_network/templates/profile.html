@@ -1,15 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token }}">
-    <title>{{ user_profile.user.username }}'s Profile - Cartoonix</title>
+    <title>{{ user_profile.user.username }}'s Profile - PixelTales</title>
+    
+    <!-- Apply saved theme immediately -->
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/theme.css' %}">
     <style>
         body {
-            background-color: #f0f2f5;
             padding-top: 60px;
         }
         .profile-image {
@@ -19,16 +29,44 @@
             border-radius: 50%;
         }
     </style>
+    <!-- Pre-defined URLs for JavaScript -->
+    <script>
+        // Store Django URLs in JavaScript variables to avoid linting errors
+        var urlData = {
+            acceptFriendRequest: "{% url 'accept_friend_request' 0 %}",
+            rejectFriendRequest: "{% url 'reject_friend_request' 0 %}",
+            csrfToken: "{{ csrf_token }}"
+        };
+    </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'home' %}">Cartoonix</a>
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <i class="bi bi-grid-3x3"></i> PixelTales
+            </a>
             <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="{% url 'profile_view' request.user.username %}">My Profile</a>
-                <a class="nav-link" href="{% url 'list_friends' %}">View Friends</a>
-                <a class="nav-link" href="{% url 'generate_video' %}">Generate Video</a>
-                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                <a class="nav-link" href="{% url 'profile_view' request.user.username %}">
+                    <i class="bi bi-person"></i> My Profile
+                </a>
+                <a class="nav-link" href="{% url 'list_friends' %}">
+                    <i class="bi bi-people"></i> Friends
+                </a>
+                <a class="nav-link" href="{% url 'generate_video' %}">
+                    <i class="bi bi-camera-video"></i> Create Story
+                </a>
+                <a class="nav-link" href="{% url 'logout' %}">
+                    <i class="bi bi-box-arrow-right"></i> Logout
+                </a>
+                <!-- Theme Switcher -->
+                <a class="nav-link d-flex align-items-center">
+                    <div class="form-check form-switch mb-0">
+                        <input class="form-check-input" type="checkbox" id="theme-switcher">
+                        <label class="form-check-label ms-1" for="theme-switcher">
+                            <i class="bi bi-moon"></i>
+                        </label>
+                    </div>
+                </a>
             </div>
         </div>
     </nav>
@@ -40,9 +78,9 @@
                     <div class="card-body text-center">
                         {% if user_profile.image %}
                         <img src="{{ user_profile.image.url }}" alt="Profile picture" class="profile-image mb-3">
-                    {% else %}
+                        {% else %}
                         <img src="/media/default.jpg" alt="Default profile picture" class="profile-image mb-3">
-                    {% endif %}
+                        {% endif %}
                         <h2 class="card-title">{{ user_profile.user.username }}</h2>
                         <p class="card-text">{{ user_profile.bio }}</p>
                         
@@ -107,102 +145,121 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-
-const friendRequestForm = document.getElementById('friendRequestForm');
-if (friendRequestForm) {
-    friendRequestForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const form = event.target;
-        const url = form.action;
-        const csrfToken = form.querySelector('input[name="csrfmiddlewaretoken"]').value;
-
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                'X-CSRFToken': csrfToken,
-                'Content-Type': 'application/json',
+        // Theme switcher script
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeSwitcher = document.getElementById('theme-switcher');
+            
+            // Check for saved theme preference or respect OS preference
+            const savedTheme = localStorage.getItem('theme') || 
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            
+            // Apply the theme
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            
+            // Update toggle state
+            if (themeSwitcher) {
+                themeSwitcher.checked = (savedTheme === 'dark');
+                
+                // Add event listener to toggle
+                themeSwitcher.addEventListener('change', (e) => {
+                    const theme = e.target.checked ? 'dark' : 'light';
+                    document.documentElement.setAttribute('data-theme', theme);
+                    localStorage.setItem('theme', theme);
+                });
             }
-        })
-        .then(response => response.json())
-        .then(data => {
-            const statusElement = document.getElementById('friendRequestStatus');
-            if (statusElement) {
-                statusElement.textContent = data.message;
-            }
-        })
-        .catch(error => console.error('Error:', error));
-    });
-}
-
-
-function deleteProfile() {
-    if (confirm('Are you sure you want to delete your profile? This action cannot be undone.')) {
-        const csrfToken = document.querySelector('meta[name="csrf-token"]');
-        if (!csrfToken) {
-            console.error('CSRF token not found!');
-            alert('CSRF token is missing. Cannot proceed.');
-            return;
-        }
-
-        fetch('/social_network/api/profile/delete/', {
-            method: 'DELETE',
-            headers: {
-                'X-CSRFToken': csrfToken.content,
-                'Content-Type': 'application/json',
-            }
-        })
-        .then(response => {
-            if (response.ok) {
-                alert('Profile deleted successfully.');
-                window.location.href = '/social_network/login/';
-            } else {
-                alert('Failed to delete profile.');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('An error occurred. Please try again.');
         });
-    }
-}
 
-function handleFriendRequest(requestId, action) {
-    const url = action === 'accept'
-        ? `{% url 'accept_friend_request' 0 %}`.replace('0', requestId)
-        : `{% url 'reject_friend_request' 0 %}`.replace('0', requestId);
+        // Friend request functions
+        const friendRequestForm = document.getElementById('friendRequestForm');
+        if (friendRequestForm) {
+            friendRequestForm.addEventListener('submit', function(event) {
+                event.preventDefault();
 
-    const csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
+                const form = event.target;
+                const url = form.action;
+                const csrfToken = form.querySelector('input[name="csrfmiddlewaretoken"]').value;
 
-    fetch(url, {
-        method: 'POST',
-        headers: {
-            'X-CSRFToken': csrfToken,
-            'Content-Type': 'application/json',
-        },
-    })
-    .then(response => {
-        if (response.ok) {
-            document.getElementById(`friendRequest-${requestId}`).remove();
+                fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': csrfToken,
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const statusElement = document.getElementById('friendRequestStatus');
+                    if (statusElement) {
+                        statusElement.textContent = data.message;
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            });
+        }
 
-            if (document.querySelectorAll('#friendRequestList li').length === 0) {
-                document.getElementById('friendRequestList').innerHTML = `
-                    <li class="list-group-item text-center">You have no friend requests.</li>`;
+
+        function deleteProfile() {
+            if (confirm('Are you sure you want to delete your profile? This action cannot be undone.')) {
+                const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+
+                fetch('/social_network/api/profile/delete/', {
+                    method: 'DELETE',
+                    headers: {
+                        'X-CSRFToken': csrfToken,
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Profile deleted successfully.');
+                        window.location.href = '/social_network/login/';
+                    } else {
+                        alert('Failed to delete profile.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again.');
+                });
+            }
+        }
+
+        function handleFriendRequest(requestId, action) {
+            let url = '';
+            if (action === 'accept') {
+                url = urlData.acceptFriendRequest.replace('0', requestId);
+            } else if (action === 'reject') {
+                url = urlData.rejectFriendRequest.replace('0', requestId);
             }
 
-            alert(`Friend request ${action === 'accept' ? 'accepted' : 'rejected'}.`);
-        } else {
-            alert('Failed to process the friend request.');
+            const csrfToken = urlData.csrfToken;
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': csrfToken,
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById(`friendRequest-${requestId}`).remove();
+
+                    if (document.querySelectorAll('#friendRequestList li').length === 0) {
+                        document.getElementById('friendRequestList').innerHTML = `
+                            <li class="list-group-item text-center">You have no friend requests.</li>`;
+                    }
+
+                    alert(`Friend request ${action === 'accept' ? 'accepted' : 'rejected'}.`);
+                } else {
+                    alert('Failed to process the friend request.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            });
         }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('An error occurred. Please try again.');
-    });
-}
-
-
-
     </script>
 </body>
 </html>

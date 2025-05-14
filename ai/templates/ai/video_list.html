@@ -4,6 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Apply saved theme immediately -->
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -28,6 +36,15 @@
                 </a>
                 <a class="nav-link" href="{% url 'logout' %}">
                     <i class="bi bi-box-arrow-right"></i> Logout
+                </a>
+                <!-- Theme Switcher -->
+                <a class="nav-link d-flex align-items-center">
+                    <div class="form-check form-switch mb-0">
+                        <input class="form-check-input" type="checkbox" id="theme-switcher">
+                        <label class="form-check-label ms-1" for="theme-switcher">
+                            <i class="bi bi-moon"></i>
+                        </label>
+                    </div>
                 </a>
             </div>
         </div>
@@ -68,11 +85,15 @@
                         <div class="card-body">
                             <div class="mb-3">
                                 <video class="w-100 rounded" controls>
-                                    <source src="{{ video.finalVideo }}" type="video/mp4">
+                                    {% if video.finalVideo %}
+                                        <source src="{{ video.finalVideo }}" type="video/mp4" onerror="this.onerror=null; this.src='https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4';">
+                                    {% else %}
+                                        <source src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4">
+                                    {% endif %}
                                     Your browser does not support the video tag.
                                 </video>
                                 <div class="d-grid mt-2">
-                                    <a href="{{ video.finalVideo }}" download="PixelTales-Story.mp4" class="btn btn-outline-primary">
+                                    <a href="{{ video.finalVideo|default:'https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4' }}" download="PixelTales-Story.mp4" class="btn btn-outline-primary">
                                         <i class="bi bi-download"></i> Download
                                     </a>
                                 </div>
@@ -83,11 +104,11 @@
                                     {% for image in video.arrImages %}
                                         <div class="carousel-item {% if forloop.first %}active{% endif %}">
                                             <img src="{{ image }}" class="d-block w-100" alt="Generated Image" 
-                                                 onerror="this.src='https://via.placeholder.com/400x300/000000/FFFFFF?text=Image+Not+Found'">
+                                                 onerror="this.src='https://picsum.photos/400/300?random={{ forloop.counter }}'">
                                         </div>
                                     {% empty %}
                                         <div class="carousel-item active">
-                                            <img src="https://via.placeholder.com/400x300/000000/FFFFFF?text=No+Images" class="d-block w-100" alt="No Images">
+                                            <img src="https://picsum.photos/400/300" class="d-block w-100" alt="No Images">
                                         </div>
                                     {% endfor %}
                                 </div>
@@ -117,8 +138,33 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Original JavaScript code remains the same
+        // Theme switcher script
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeSwitcher = document.getElementById('theme-switcher');
+            
+            // Check for saved theme preference or respect OS preference
+            const savedTheme = localStorage.getItem('theme') || 
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            
+            // Apply the theme
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            
+            // Update toggle state
+            if (themeSwitcher) {
+                themeSwitcher.checked = (savedTheme === 'dark');
+                
+                // Add event listener to toggle
+                themeSwitcher.addEventListener('change', (e) => {
+                    const theme = e.target.checked ? 'dark' : 'light';
+                    document.documentElement.setAttribute('data-theme', theme);
+                    localStorage.setItem('theme', theme);
+                });
+            }
+        });
+
+        // Original JavaScript code for video generation
         document.getElementById('generateVideoForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const userPrompt = document.getElementById('prompt').value;
@@ -164,7 +210,5 @@
             });
         }
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

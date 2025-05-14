@@ -1,5 +1,5 @@
 """
-ASGI config for cartoonix project.
+ASGI config for pixeltales project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -13,8 +13,7 @@ from channels.routing import ProtocolTypeRouter, URLRouter
 from channels.auth import AuthMiddlewareStack
 from chat.routing import websocket_urlpatterns
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'cartoonix.settings')
-
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pixeltales.settings')
 
 application = ProtocolTypeRouter({
     "http": get_asgi_application(),
@@ -24,4 +23,3 @@ application = ProtocolTypeRouter({
         )
     ),
 })
-

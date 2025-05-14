@@ -1,10 +1,9 @@
-# In cartoonix/ai/nvidia.py
-
 import base64
 import requests
 import random
-from dotenv import load_dotenv
+import time
 import os
+from dotenv import load_dotenv
 
 load_dotenv()
 API_KEY = os.getenv("NVIDIA_API_KEY")
@@ -22,13 +21,35 @@ MOCK_VIDEOS = [
 def generate_video_from_images_with_nvidia(image_urls):
     """ Generate video using Nvidia's API based on a list of image URLs.
     :param image_urls: List of URLs of the images used for video generation
-    :return: List of base64 encoded video strings
+    :return: List of real video URLs (not base64 data)
     """
+    from django.conf import settings
+    from ai.s3_utils import ensure_dir_exists, create_placeholder_video
+    
     # Use mock data if enabled or if there's an API error
     if USE_MOCK_DATA:
         print(f"Using mock videos")
-        return MOCK_VIDEOS
+        
+        # Create actual video files instead of base64 data
+        video_paths = []
+        for i in range(min(5, len(image_urls))):
+            timestamp = int(time.time()) + i
+            folder_path = os.path.join(settings.MEDIA_ROOT, 'videos')
+            ensure_dir_exists(folder_path)
+            
+            file_path = os.path.join(folder_path, f"placeholder_{timestamp}.mp4")
+            
+            if create_placeholder_video(file_path):
+                video_url = f"/media/videos/placeholder_{timestamp}.mp4"
+                print(f"Created mock video at {file_path}, URL: {video_url}")
+                video_paths.append(video_url)
+            else:
+                # Emergency fallback - use a public video URL
+                video_paths.append("https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4")
+        
+        return video_paths
     
+    # Original API call code for non-mock mode
     api_url = "https://ai.api.nvidia.com/v1/genai/stabilityai/stable-video-diffusion"
     headers = {
         "accept": "application/json",
@@ -66,6 +87,6 @@ def generate_video_from_images_with_nvidia(image_urls):
     
     # Fall back to mock data if we couldn't generate any videos
     if not video_results:
-        return MOCK_VIDEOS
+        return ["https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4"]
         
     return video_results

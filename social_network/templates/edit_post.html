@@ -1,30 +1,60 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Post - Cartoonix</title>
+    <title>Edit Post - PixelTales</title>
+    
+    <!-- Apply saved theme immediately -->
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/theme.css' %}">
     <style>
         body {
-            background-color: #f0f2f5;
             padding-top: 60px;
         }
         .card {
             box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
         }
-
-        .main-button{
-            background-color: #6DC7FF;
-            border: none
-        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'home' %}">Cartoonix</a>
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <i class="bi bi-grid-3x3"></i> PixelTales
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="{% url 'profile_view' request.user.username %}">
+                    <i class="bi bi-person"></i> My Profile
+                </a>
+                <a class="nav-link" href="{% url 'list_friends' %}">
+                    <i class="bi bi-people"></i> Friends
+                </a>
+                <a class="nav-link" href="{% url 'generate_video' %}">
+                    <i class="bi bi-camera-video"></i> Create Story
+                </a>
+                <a class="nav-link" href="{% url 'logout' %}">
+                    <i class="bi bi-box-arrow-right"></i> Logout
+                </a>
+                <!-- Theme Switcher -->
+                <a class="nav-link d-flex align-items-center">
+                    <div class="form-check form-switch mb-0">
+                        <input class="form-check-input" type="checkbox" id="theme-switcher">
+                        <label class="form-check-label ms-1" for="theme-switcher">
+                            <i class="bi bi-moon"></i>
+                        </label>
+                    </div>
+                </a>
+            </div>
         </div>
     </nav>
 
@@ -69,7 +99,7 @@
                                 </div>
                             {% endfor %}
                             <div class="d-grid gap-2">
-                                <button type="submit" class="btn btn-primary main-button">
+                                <button type="submit" class="btn btn-primary">
                                     <i class="bi bi-check-circle"></i> Update Post
                                 </button>
                                 <a href="{% url 'home' %}" class="btn btn-secondary">
@@ -84,5 +114,30 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Theme switcher script
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeSwitcher = document.getElementById('theme-switcher');
+            
+            // Check for saved theme preference or respect OS preference
+            const savedTheme = localStorage.getItem('theme') || 
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            
+            // Apply the theme
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            
+            // Update toggle state
+            if (themeSwitcher) {
+                themeSwitcher.checked = (savedTheme === 'dark');
+                
+                // Add event listener to toggle
+                themeSwitcher.addEventListener('change', (e) => {
+                    const theme = e.target.checked ? 'dark' : 'light';
+                    document.documentElement.setAttribute('data-theme', theme);
+                    localStorage.setItem('theme', theme);
+                });
+            }
+        });
+    </script>
 </body>
 </html>

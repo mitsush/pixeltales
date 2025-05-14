@@ -187,3 +187,213 @@
 2025-05-14 01:14:06,293 INFO api_logger User ma accessed the home page and viewed 2 posts.
 2025-05-14 01:15:11,052 INFO api_logger User ma accessed the home page and viewed 2 posts.
 2025-05-14 01:15:59,797 INFO api_logger User ma accessed the home page and viewed 2 posts.
+2025-05-14 20:09:15,659 INFO api_logger User ma accessed the home page and viewed 2 posts.
+2025-05-14 20:09:18,205 INFO api_logger User ma logged out.
+2025-05-14 20:12:09,632 WARNING api_logger Failed login attempt for username: mitsu.
+2025-05-14 20:12:20,194 WARNING api_logger Failed login attempt for username: mitsu.
+2025-05-14 20:12:45,439 WARNING api_logger Failed login attempt for username: mitsu.
+2025-05-14 20:12:46,857 WARNING api_logger Failed login attempt for username: mitsu.
+2025-05-14 20:12:51,426 INFO api_logger User mitsu1 logged in successfully.
+2025-05-14 20:12:51,439 INFO api_logger User mitsu1 accessed the home page and viewed 2 posts.
+2025-05-14 20:12:55,423 INFO api_logger User mitsu1 viewed the profile of mitsu1. Sent request: False, Is friend: False
+2025-05-14 20:12:56,967 INFO api_logger GET request to GenerateVideo endpoint.
+2025-05-14 20:13:01,423 INFO api_logger User mitsu1 accessed the home page and viewed 2 posts.
+2025-05-14 20:13:18,485 INFO api_logger User mitsu1 logged out.
+2025-05-14 20:13:27,425 WARNING api_logger Failed registration attempt. Errors: <ul class="errorlist"><li>password2<ul class="errorlist"><li>This password is too common.</li></ul></li></ul>
+2025-05-14 20:13:35,923 INFO api_logger User 123 registered successfully.
+2025-05-14 20:13:39,707 INFO api_logger User 123 logged in successfully.
+2025-05-14 20:13:39,721 INFO api_logger User 123 accessed the home page and viewed 2 posts.
+2025-05-14 20:32:39,973 INFO api_logger User mitsu1 accessed the home page and viewed 2 posts.
+2025-05-14 20:32:43,304 INFO api_logger User mitsu1 viewed the profile of mitsu1. Sent request: False, Is friend: False
+2025-05-14 20:32:44,989 INFO api_logger User mitsu1 viewed the profile of mitsu1. Sent request: False, Is friend: False
+2025-05-14 20:34:36,750 INFO api_logger User mitsu1 is viewing their friends list with 0 friends.
+2025-05-14 20:34:36,751 INFO api_logger User mitsu1 has sent friend requests to 0 users.
+2025-05-14 20:34:36,752 INFO api_logger User mitsu1 has received 0 friend requests.
+2025-05-14 20:34:36,752 INFO api_logger User mitsu1 performed an empty search.
+2025-05-14 20:34:36,753 INFO api_logger Found 0 users who are not friends.
+2025-05-14 20:34:40,267 INFO api_logger User mitsu1 is viewing their friends list with 0 friends.
+2025-05-14 20:34:40,267 INFO api_logger User mitsu1 has sent friend requests to 0 users.
+2025-05-14 20:34:40,268 INFO api_logger User mitsu1 has received 0 friend requests.
+2025-05-14 20:34:40,269 INFO api_logger User mitsu1 performed a search with query 'mitsu', found 2 users.
+2025-05-14 20:34:40,270 INFO api_logger Found 2 users who are not friends.
+2025-05-14 20:34:42,715 INFO api_logger Friend request sent from mitsu1 to mitsush.
+2025-05-14 20:34:43,696 INFO api_logger User mitsu1 is viewing their friends list with 0 friends.
+2025-05-14 20:34:43,698 INFO api_logger User mitsu1 has sent friend requests to 1 users.
+2025-05-14 20:34:43,699 INFO api_logger User mitsu1 has received 0 friend requests.
+2025-05-14 20:34:43,702 INFO api_logger User mitsu1 performed a search with query 'mitsu', found 2 users.
+2025-05-14 20:34:43,707 INFO api_logger Found 2 users who are not friends.
+2025-05-14 20:34:44,965 INFO api_logger Friend request sent from mitsu1 to mitsu.
+2025-05-14 20:34:46,002 INFO api_logger User mitsu1 is viewing their friends list with 0 friends.
+2025-05-14 20:34:46,004 INFO api_logger User mitsu1 has sent friend requests to 2 users.
+2025-05-14 20:34:46,005 INFO api_logger User mitsu1 has received 0 friend requests.
+2025-05-14 20:34:46,007 INFO api_logger User mitsu1 performed a search with query 'mitsu', found 2 users.
+2025-05-14 20:34:46,010 INFO api_logger Found 2 users who are not friends.
+2025-05-14 20:34:56,442 WARNING api_logger Failed login attempt for username: mitsush.
+2025-05-14 20:35:01,913 WARNING api_logger Failed login attempt for username: mitsush.
+2025-05-14 20:35:11,742 INFO api_logger User mitsumitsu registered successfully.
+2025-05-14 20:35:16,765 INFO api_logger User mitsumitsu logged in successfully.
+2025-05-14 20:35:16,778 INFO api_logger User mitsumitsu accessed the home page and viewed 2 posts.
+2025-05-14 20:35:18,865 INFO api_logger User mitsumitsu is viewing their friends list with 0 friends.
+2025-05-14 20:35:18,866 INFO api_logger User mitsumitsu has sent friend requests to 0 users.
+2025-05-14 20:35:18,868 INFO api_logger User mitsumitsu has received 0 friend requests.
+2025-05-14 20:35:18,869 INFO api_logger User mitsumitsu performed an empty search.
+2025-05-14 20:35:18,870 INFO api_logger Found 0 users who are not friends.
+2025-05-14 20:35:21,957 INFO api_logger User mitsu1 is viewing their friends list with 0 friends.
+2025-05-14 20:35:21,958 INFO api_logger User mitsu1 has sent friend requests to 2 users.
+2025-05-14 20:35:21,959 INFO api_logger User mitsu1 has received 0 friend requests.
+2025-05-14 20:35:21,960 INFO api_logger User mitsu1 performed a search with query 'mitsu', found 3 users.
+2025-05-14 20:35:21,961 INFO api_logger Found 3 users who are not friends.
+2025-05-14 20:35:23,446 INFO api_logger Friend request sent from mitsu1 to mitsumitsu.
+2025-05-14 20:35:25,069 INFO api_logger User mitsu1 is viewing their friends list with 0 friends.
+2025-05-14 20:35:25,070 INFO api_logger User mitsu1 has sent friend requests to 3 users.
+2025-05-14 20:35:25,071 INFO api_logger User mitsu1 has received 0 friend requests.
+2025-05-14 20:35:25,072 INFO api_logger User mitsu1 performed a search with query 'mitsu', found 3 users.
+2025-05-14 20:35:25,073 INFO api_logger Found 3 users who are not friends.
+2025-05-14 20:35:27,837 INFO api_logger User mitsumitsu viewed the profile of mitsumitsu. Sent request: False, Is friend: False
+2025-05-14 20:35:29,076 INFO api_logger User mitsumitsu is accepting a friend request with ID 3
+2025-05-14 20:35:29,113 INFO api_logger User mitsumitsu and mitsu1 are now friends.
+2025-05-14 20:35:30,821 INFO api_logger User mitsumitsu is viewing their friends list with 1 friends.
+2025-05-14 20:35:30,822 INFO api_logger User mitsumitsu has sent friend requests to 0 users.
+2025-05-14 20:35:30,823 INFO api_logger User mitsumitsu has received 0 friend requests.
+2025-05-14 20:35:30,823 INFO api_logger User mitsumitsu performed an empty search.
+2025-05-14 20:35:30,824 INFO api_logger Found 0 users who are not friends.
+2025-05-14 20:35:32,791 INFO api_logger User mitsumitsu viewed the profile of mitsu1. Sent request: False, Is friend: True
+2025-05-14 20:35:35,469 INFO api_logger User mitsumitsu is viewing their friends list with 1 friends.
+2025-05-14 20:35:35,471 INFO api_logger User mitsumitsu has sent friend requests to 0 users.
+2025-05-14 20:35:35,471 INFO api_logger User mitsumitsu has received 0 friend requests.
+2025-05-14 20:35:35,472 INFO api_logger User mitsumitsu performed an empty search.
+2025-05-14 20:35:35,472 INFO api_logger Found 0 users who are not friends.
+2025-05-14 20:35:36,574 INFO api_logger User mitsumitsu viewed the profile of mitsumitsu. Sent request: False, Is friend: False
+2025-05-14 20:35:38,333 INFO api_logger User mitsu1 accessed the home page and viewed 2 posts.
+2025-05-14 20:42:46,046 INFO api_logger User mitsumitsu is viewing their friends list with 1 friends.
+2025-05-14 20:42:46,047 INFO api_logger User mitsumitsu has sent friend requests to 0 users.
+2025-05-14 20:42:46,048 INFO api_logger User mitsumitsu has received 0 friend requests.
+2025-05-14 20:42:46,048 INFO api_logger User mitsumitsu performed an empty search.
+2025-05-14 20:42:46,049 INFO api_logger Found 0 users who are not friends.
+2025-05-14 20:42:49,431 INFO api_logger User mitsumitsu viewed the profile of mitsu1. Sent request: False, Is friend: True
+2025-05-14 20:42:52,950 INFO api_logger User mitsumitsu is viewing their friends list with 1 friends.
+2025-05-14 20:42:52,951 INFO api_logger User mitsumitsu has sent friend requests to 0 users.
+2025-05-14 20:42:52,952 INFO api_logger User mitsumitsu has received 0 friend requests.
+2025-05-14 20:42:52,952 INFO api_logger User mitsumitsu performed an empty search.
+2025-05-14 20:42:52,954 INFO api_logger Found 0 users who are not friends.
+2025-05-14 20:42:53,744 INFO api_logger User mitsumitsu viewed the profile of mitsumitsu. Sent request: False, Is friend: False
+2025-05-14 20:43:01,509 INFO api_logger User mitsumitsu updated their profile.
+2025-05-14 20:43:01,518 INFO api_logger User mitsumitsu accessed the home page and viewed 2 posts.
+2025-05-14 20:43:06,141 INFO api_logger User mitsu1 is viewing their friends list with 1 friends.
+2025-05-14 20:43:06,142 INFO api_logger User mitsu1 has sent friend requests to 2 users.
+2025-05-14 20:43:06,143 INFO api_logger User mitsu1 has received 0 friend requests.
+2025-05-14 20:43:06,143 INFO api_logger User mitsu1 performed an empty search.
+2025-05-14 20:43:06,144 INFO api_logger Found 0 users who are not friends.
+2025-05-14 20:43:08,058 INFO api_logger User mitsu1 viewed the profile of mitsumitsu. Sent request: False, Is friend: True
+2025-05-14 20:43:09,193 INFO api_logger User mitsu1 viewed the profile of mitsumitsu. Sent request: False, Is friend: True
+2025-05-14 20:43:14,392 INFO api_logger User mitsu1 viewed the profile of mitsu1. Sent request: False, Is friend: False
+2025-05-14 20:43:16,364 INFO api_logger User mitsu1 is viewing their friends list with 1 friends.
+2025-05-14 20:43:16,365 INFO api_logger User mitsu1 has sent friend requests to 2 users.
+2025-05-14 20:43:16,366 INFO api_logger User mitsu1 has received 0 friend requests.
+2025-05-14 20:43:16,366 INFO api_logger User mitsu1 performed an empty search.
+2025-05-14 20:43:16,368 INFO api_logger Found 0 users who are not friends.
+2025-05-14 20:43:17,453 INFO api_logger GET request to GenerateVideo endpoint.
+2025-05-14 20:43:19,798 INFO api_logger User mitsu1 viewed the profile of mitsu1. Sent request: False, Is friend: False
+2025-05-14 20:43:21,774 INFO api_logger User mitsu1 accessed the home page and viewed 2 posts.
+2025-05-14 20:43:23,281 INFO api_logger User mitsu1 is viewing their friends list with 1 friends.
+2025-05-14 20:43:23,282 INFO api_logger User mitsu1 has sent friend requests to 2 users.
+2025-05-14 20:43:23,283 INFO api_logger User mitsu1 has received 0 friend requests.
+2025-05-14 20:43:23,283 INFO api_logger User mitsu1 performed an empty search.
+2025-05-14 20:43:23,284 INFO api_logger Found 0 users who are not friends.
+2025-05-14 20:43:25,043 INFO api_logger User mitsu1 accessed the home page and viewed 2 posts.
+2025-05-14 21:12:22,366 INFO api_logger User mitsu1 accessed the home page and viewed 2 posts.
+2025-05-14 21:12:24,032 INFO api_logger User mitsu1 is viewing their friends list with 1 friends.
+2025-05-14 21:12:24,033 INFO api_logger User mitsu1 has sent friend requests to 2 users.
+2025-05-14 21:12:24,034 INFO api_logger User mitsu1 has received 0 friend requests.
+2025-05-14 21:12:24,035 INFO api_logger User mitsu1 performed an empty search.
+2025-05-14 21:12:24,036 INFO api_logger Found 0 users who are not friends.
+2025-05-14 21:12:26,553 INFO api_logger User mitsu1 accessed the home page and viewed 2 posts.
+2025-05-14 21:12:27,763 INFO api_logger User mitsu1 is viewing their friends list with 1 friends.
+2025-05-14 21:12:27,764 INFO api_logger User mitsu1 has sent friend requests to 2 users.
+2025-05-14 21:12:27,764 INFO api_logger User mitsu1 has received 0 friend requests.
+2025-05-14 21:12:27,765 INFO api_logger User mitsu1 performed an empty search.
+2025-05-14 21:12:27,765 INFO api_logger Found 0 users who are not friends.
+2025-05-14 21:12:30,406 INFO api_logger User mitsu1 viewed the profile of mitsumitsu. Sent request: False, Is friend: True
+2025-05-14 21:12:36,523 INFO api_logger User mitsu1 accessed the home page and viewed 2 posts.
+2025-05-14 21:17:05,827 INFO api_logger User mitsu1 accessed the home page and viewed 2 posts.
+2025-05-14 21:17:06,765 INFO api_logger User mitsu1 viewed the profile of mitsu1. Sent request: False, Is friend: False
+2025-05-14 21:17:40,766 INFO api_logger User mitsu1 viewed the profile of mitsu1. Sent request: False, Is friend: False
+2025-05-14 21:17:45,422 INFO api_logger User mitsu1 accessed the home page and viewed 2 posts.
+2025-05-14 21:17:48,235 INFO api_logger User mitsu1 accessed the home page and viewed 2 posts.
+2025-05-14 21:18:05,996 INFO api_logger User mitsu1 created a post with title: 12312312.
+2025-05-14 21:18:06,008 INFO api_logger User mitsu1 accessed the home page and viewed 3 posts.
+2025-05-14 21:18:11,910 INFO api_logger User mitsu1 accessed the edit page for post 4.
+2025-05-14 21:18:35,455 INFO api_logger User mitsu1 successfully updated post 4 with title: 12312312.
+2025-05-14 21:18:35,468 INFO api_logger User mitsu1 accessed the home page and viewed 3 posts.
+2025-05-14 21:18:38,484 INFO api_logger User mitsu1 accessed the edit page for post 4.
+2025-05-14 21:18:51,740 INFO api_logger User mitsu1 accessed the edit page for post 4.
+2025-05-14 21:18:56,216 INFO api_logger User mitsu1 successfully updated post 4 with title: 12312312.
+2025-05-14 21:18:56,226 INFO api_logger User mitsu1 accessed the home page and viewed 3 posts.
+2025-05-14 21:19:30,057 INFO api_logger User mitsu1 accessed the home page and viewed 3 posts.
+2025-05-14 21:19:30,939 INFO api_logger User mitsu1 viewed the profile of mitsu1. Sent request: False, Is friend: False
+2025-05-14 21:19:31,927 INFO api_logger User mitsu1 is viewing their friends list with 1 friends.
+2025-05-14 21:19:31,928 INFO api_logger User mitsu1 has sent friend requests to 2 users.
+2025-05-14 21:19:31,929 INFO api_logger User mitsu1 has received 0 friend requests.
+2025-05-14 21:19:31,929 INFO api_logger User mitsu1 performed an empty search.
+2025-05-14 21:19:31,930 INFO api_logger Found 0 users who are not friends.
+2025-05-14 21:19:32,882 INFO api_logger GET request to GenerateVideo endpoint.
+2025-05-14 21:19:35,063 INFO api_logger User mitsu1 accessed the home page and viewed 3 posts.
+2025-05-14 21:20:45,043 INFO api_logger GET request to GenerateVideo endpoint.
+2025-05-14 21:20:49,389 INFO api_logger User mitsu1 accessed the home page and viewed 3 posts.
+2025-05-14 21:35:45,319 INFO api_logger User mitsu1 accessed the home page and viewed 3 posts.
+2025-05-14 21:35:46,621 INFO api_logger GET request to GenerateVideo endpoint.
+2025-05-14 21:35:58,826 INFO api_logger POST request to GenerateVideo endpoint.
+2025-05-14 21:35:58,826 INFO api_logger MEDIA_ROOT is: C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media
+2025-05-14 21:35:58,826 INFO api_logger MEDIA_URL is: /media/
+2025-05-14 21:35:58,827 INFO api_logger Generating video for prompt: a cat
+2025-05-14 21:36:00,422 INFO api_logger Image saved to C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\images/image_1747240558.jpg, exists: True
+2025-05-14 21:36:01,882 INFO api_logger Image saved to C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\images/image_1747240560.jpg, exists: True
+2025-05-14 21:36:03,316 INFO api_logger Image saved to C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\images/image_1747240561.jpg, exists: True
+2025-05-14 21:36:04,582 INFO api_logger Image saved to C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\images/image_1747240563.jpg, exists: True
+2025-05-14 21:36:05,706 INFO api_logger Image saved to C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\images/image_1747240564.jpg, exists: True
+2025-05-14 21:36:05,707 INFO api_logger Stored images locally: ['/media/images/image_1747240558.jpg', '/media/images/image_1747240560.jpg', '/media/images/image_1747240561.jpg', '/media/images/image_1747240563.jpg', '/media/images/image_1747240564.jpg']
+2025-05-14 21:36:05,707 ERROR api_logger Error during video generation: name 'time' is not defined
+2025-05-14 21:45:13,983 INFO api_logger User mitsu1 accessed the home page and viewed 3 posts.
+2025-05-14 21:45:17,193 INFO api_logger GET request to GenerateVideo endpoint.
+2025-05-14 21:46:03,073 INFO api_logger GET request to GenerateVideo endpoint.
+2025-05-14 21:46:07,010 INFO api_logger POST request to GenerateVideo endpoint.
+2025-05-14 21:46:07,010 INFO api_logger MEDIA_ROOT is: C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media
+2025-05-14 21:46:07,011 INFO api_logger MEDIA_URL is: /media/
+2025-05-14 21:46:07,011 INFO api_logger Generating video for prompt: a cat
+2025-05-14 21:46:08,044 INFO api_logger Image saved to C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\images/image_1747241167.jpg, exists: True
+2025-05-14 21:46:08,886 INFO api_logger Image saved to C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\images/image_1747241168.jpg, exists: True
+2025-05-14 21:46:09,610 INFO api_logger Image saved to C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\images/image_1747241168.jpg, exists: True
+2025-05-14 21:46:10,475 INFO api_logger Image saved to C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\images/image_1747241169.jpg, exists: True
+2025-05-14 21:46:11,190 INFO api_logger Image saved to C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\images/image_1747241170.jpg, exists: True
+2025-05-14 21:46:11,190 INFO api_logger Stored images locally: ['/media/images/image_1747241167.jpg', '/media/images/image_1747241168.jpg', '/media/images/image_1747241168.jpg', '/media/images/image_1747241169.jpg', '/media/images/image_1747241170.jpg']
+2025-05-14 21:46:14,555 INFO api_logger Generated video URLs: ['/media/videos/placeholder_1747241171.mp4', '/media/videos/placeholder_1747241173.mp4', '/media/videos/placeholder_1747241174.mp4', '/media/videos/placeholder_1747241176.mp4', '/media/videos/placeholder_1747241178.mp4']
+2025-05-14 21:46:14,556 INFO api_logger Video already at C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\videos/placeholder_1747241171.mp4, exists: True
+2025-05-14 21:46:14,556 INFO api_logger Video already at C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\videos/placeholder_1747241173.mp4, exists: True
+2025-05-14 21:46:14,556 INFO api_logger Video already at C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\videos/placeholder_1747241174.mp4, exists: True
+2025-05-14 21:46:14,556 INFO api_logger Video already at C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\videos/placeholder_1747241176.mp4, exists: True
+2025-05-14 21:46:14,556 INFO api_logger Video already at C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\videos/placeholder_1747241178.mp4, exists: True
+2025-05-14 21:46:14,561 INFO api_logger VideoPrompt successfully created and saved to database.
+2025-05-14 21:46:17,615 INFO api_logger GET request to GenerateVideo endpoint.
+2025-05-14 21:52:38,641 INFO api_logger GET request to GenerateVideo endpoint.
+2025-05-14 21:52:53,428 INFO api_logger POST request to GenerateVideo endpoint.
+2025-05-14 21:52:53,428 INFO api_logger MEDIA_ROOT is: C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media
+2025-05-14 21:52:53,428 INFO api_logger MEDIA_URL is: /media/
+2025-05-14 21:52:53,428 INFO api_logger Generating video for prompt: Create a realistic image of a mischievous cat causing destruction.
+The cat should be center frame, knocking over buildings or landmarks.
+Include dramatic lighting and smoke/debris effects.
+Style: Photorealistic with dramatic composition.
+2025-05-14 21:52:54,244 INFO api_logger Image saved to C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\images/image_1747241573.jpg, exists: True
+2025-05-14 21:52:54,915 INFO api_logger Image saved to C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\images/image_1747241574.jpg, exists: True
+2025-05-14 21:52:55,660 INFO api_logger Image saved to C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\images/image_1747241574.jpg, exists: True
+2025-05-14 21:52:56,354 INFO api_logger Image saved to C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\images/image_1747241575.jpg, exists: True
+2025-05-14 21:52:57,074 INFO api_logger Image saved to C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\images/image_1747241576.jpg, exists: True
+2025-05-14 21:52:57,075 INFO api_logger Stored images locally: ['/media/images/image_1747241573.jpg', '/media/images/image_1747241574.jpg', '/media/images/image_1747241574.jpg', '/media/images/image_1747241575.jpg', '/media/images/image_1747241576.jpg']
+2025-05-14 21:53:00,277 INFO api_logger Generated video URLs: ['/media/videos/placeholder_1747241577.mp4', '/media/videos/placeholder_1747241578.mp4', '/media/videos/placeholder_1747241580.mp4', '/media/videos/placeholder_1747241582.mp4', '/media/videos/placeholder_1747241583.mp4']
+2025-05-14 21:53:00,277 INFO api_logger Video already at C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\videos/placeholder_1747241577.mp4, exists: True
+2025-05-14 21:53:00,278 INFO api_logger Video already at C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\videos/placeholder_1747241578.mp4, exists: True
+2025-05-14 21:53:00,278 INFO api_logger Video already at C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\videos/placeholder_1747241580.mp4, exists: True
+2025-05-14 21:53:00,278 INFO api_logger Video already at C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\videos/placeholder_1747241582.mp4, exists: True
+2025-05-14 21:53:00,278 INFO api_logger Video already at C:\Users\SystemX\Desktop\django\pixeltales\pixeltales\media\videos/placeholder_1747241583.mp4, exists: True
+2025-05-14 21:53:00,283 INFO api_logger VideoPrompt successfully created and saved to database.
+2025-05-14 21:53:02,340 INFO api_logger GET request to GenerateVideo endpoint.
+2025-05-14 22:00:23,616 INFO api_logger User mitsu1 accessed the home page and viewed 3 posts.
